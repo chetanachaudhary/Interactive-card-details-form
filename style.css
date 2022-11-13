@@ -1,0 +1,362 @@
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+}
+
+.left_Side{
+    min-height:100vh;
+    width:30%;
+    background-image: url("bg-main-desktop.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+
+
+}
+.card{
+    position:absolute;
+    top:60%;
+    display:flex;
+    flex-direction: column;
+    gap:5rem;
+    transform:translate(40%,-70%);
+}
+.cardContainerFront{
+    position:relative;
+    top:3rem;
+    transform:translateX(-70px);
+}
+#cardLogo{
+    position:absolute;
+    top:1rem;
+    left:1rem;
+}
+#Number{
+    position:absolute;
+    bottom:5rem;
+    left:1rem;
+    letter-spacing: 2px;
+    color:hsl(0, 0%, 100%);   
+
+}
+.cardInfo{
+    position:absolute;
+    bottom:2rem;
+    left:1rem;
+    right:3rem;
+    display:flex;
+    color:hsl(0, 0%, 100%);   
+    justify-content: space-between;
+}
+.cardContainerBack{
+    position:relative;
+}
+#symbolNumber{
+    position:absolute;
+    top:7rem;
+    right:3.5rem;
+    color:hsl(270, 3%, 87%);
+
+}
+.error{
+    border:2px solid hsl(0, 100%, 66%);
+}
+.error_msg{
+    gap:0;
+}
+.error_msg::after{
+    content:"Input is blank";
+    color:hsl(0, 100%, 66%);
+    margin-top:.2rem;
+}
+.right_Side{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position:absolute;
+    top:5rem;
+    right:8rem;
+}
+.right_Side form{
+    display:grid;
+    gap:1rem;
+    width:300px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(4,1fr) ;
+}
+label{
+    color:hsl(278, 68%, 11%);
+    margin-bottom: 0rem;
+    text-transform: uppercase;
+}
+input{
+    padding: .5rem;
+    font-size: 15px;
+    border:1px solid hsl(279, 6%, 55%);
+    border-radius:6px;
+}
+.Hidden{
+    display: none !important;
+} 
+input::placeholder{
+    font-family:inherit;
+    color:hsl(279, 6%, 55%);
+}
+input:focus{
+    outline-color:hsl(249, 99%, 64%) ;
+}
+.cardHolder{
+    display:flex;
+    flex-direction: column;
+    grid-column: 2 span;
+
+}
+.CardNum{
+    display:flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+.expDate{
+    display:flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+.CVC_info{
+    display:flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+.carddateExpInfo{
+    display:flex;
+    grid-column:2 span;
+    /* gap:1rem; */
+}
+.inputs div{
+    flex-direction: row;
+}
+.expDate div input{
+    width:4rem;
+    margin-inline: .5rem;
+    margin-left: 0;
+    gap:2px;
+}
+.numYear{
+    position:absolute;
+    top:10.6rem;
+    right:10em;
+}
+
+.CVC_info{
+    width:50%;
+    
+     position:absolute;
+    top:9.2rem; 
+    right:0.1rem;
+}
+
+form button{
+    grid-column: 2 span;
+    font-size:18px;
+    height: 3rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 6px;
+    background-color:hsl(278, 68%, 11%);
+    cursor:pointer;
+   
+
+}
+.thanks{
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    gap:2rem;
+    position:absolute;
+    top:9rem;
+    right:23rem;
+}
+.thanks h1{
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+.thanks p{
+    font-size:16px;
+    color: hsl(279, 6%, 55%);
+}
+.thanks button{
+    color:hsl(0, 0%, 100%);
+    width:80%;
+    border-radius: 6px;
+    padding:1rem;
+    font-size: 16px;
+    background-color:hsl(278, 68%, 11%) ;
+    cursor: pointer;
+
+}
+.card-details{
+    position:absolute;
+    top:5rem;
+    right:15rem;
+}
+/* @media screen and(max-width:1064px){
+    .cardContainerFront,#frontCard,.cardContainerBack,#cardbackImage{
+        width:300px;
+    }
+    .details #cardLogo{
+        width:50px;
+    }
+    #Number{
+        font-size:10px;
+    }
+    .CVC_info{
+        top:42%;
+        right:12%;
+    }
+
+} */
+@media screen and (max-width:1119px) {
+    .left_Side{
+        width:100%;
+        min-height: 32vh;
+        background-image: url("bg-main-mobile.png");
+    }
+    .cardContainerFront,.cardContainerBack,#frontCard,#cardbackImage{
+        width:270px;
+    }
+    .card{
+        flex-direction:column-reverse;
+        left:20%;
+        top:90%;
+        gap:0;
+        
+    }
+    #frontCard{
+        z-index: 100;
+        
+        
+    }
+    #symbolNumber{
+        position:absolute;
+        top:4rem;
+        right:2rem;
+    }
+    .details{
+        font-size: 15px;
+    }
+    #Number{
+        font-size: 18px;
+    }
+    #cardLogo{
+        width: 33px;
+    }
+    .right_Side{
+        margin-top:7rem;
+        position:absolute;
+        top:12rem;
+        left:1rem;
+    }
+    #cardholder_cardNumber{
+        position:absolute;
+        top:1.5rem;
+    }
+    .CardNum{
+        position:absolute;
+        top:5rem;
+        
+    }
+    .expDate{
+        position:absolute;
+        top:10rem;
+    }
+    .expDate div input{
+        width:4.1rem;
+    }
+    .numYear{
+        position:absolute;
+        left:5rem;
+        top:1.3rem;
+    }
+    .CVC_info{
+        position:absolute;
+            top:10rem;
+            left:11rem;
+            width:90%;
+        
+    }
+    form button{
+        position:absolute;
+        top:15rem;
+        width:28rem;
+
+    }
+    .thanks{
+        position:absolute;
+        top:25rem;
+        left:8rem;
+    }
+
+    
+}
+@media screen and (max-width:450px) {
+    .left_Side{
+        width:100%;
+        min-height: 32vh;
+        min-width: 100%;
+        background-image: url("bg-main-mobile.png");
+    }
+    .cardContainerFront,.cardContainerBack,#frontCard,#cardbackImage{
+        width:250px;
+    }
+    .card{
+        flex-direction:column-reverse;
+        left:4%;
+        top:90%;
+        gap:0;
+        
+    }
+    #symbolNumber{
+        position:absolute;
+        top:4rem;
+        right:2rem;
+    }
+    .details{
+        font-size: 14px;
+    }
+    #Number{
+        font-size: 16.5px;
+    }
+    #cardLogo{
+        width: 33px;
+    }
+    .right_Side{
+        margin-top:7rem;
+        position:absolute;
+        top:12rem;
+        left:12rem;
+    }
+    form button{
+        position:absolute;
+        top:15rem;
+        width:20rem;
+
+    }
+    .CVC_info{
+        position:absolute;
+            top:10rem;
+            left:11rem;
+            width:40%;
+        
+    }
+    .thanks{
+        position:absolute;
+        left:1rem;
+    }
+}

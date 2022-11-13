@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive-card-details</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <!-- <div class="container">
+                <img src="bg-main-desktop.png" alt="container-img"
+                    id="backgroundContainer">
+            </div> -->
+         <div class="left_Side">
+              <div class="card">
+                <div class="cardContainerFront">
+                  <img src="bg-card-front.png" alt="cardContainer" id="frontCard">
+                    <div class="details">
+                       <img src="card-logo.svg" alt="card-logo-image"
+                        id="cardLogo">
+                        <h1 id="Number">0000 0000 0000 0000</h1>
+                       <div class="cardInfo">
+                          <p id="name">Jane Appleseed</p>
+                           <span id="date">
+                            <span id="month">00</span> /
+                            <span id="year">00</span>
+
+                          </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardContainerBack">
+                  <img src="bg-card-back.png" alt="card-back image"
+                    id="cardbackImage">
+                   <span id="symbolNumber">000</span>
+
+                </div> 
+              </div>
+            </div>
+            <div class="right_Side">
+              <div class="card-details">
+                <form>
+                    <div class="cardHolder">
+                        <label for="cardholderName">Cardholder Name</label>
+                        <input type="text"
+                            placeholder="e.g. Jane Appleseed"
+                            id="CardName" required/>
+                    </div>
+                    <div class="CardNum">
+                        <label for="card_Number">Card Number</label>
+                        <input type="number"
+                            placeholder="e.g. 1234 5678 9123 0000"
+                            id="cardholder_cardNumber"
+                            oninput="if(this.value.length > this.maxlength)this.value=this.value.slice(1,this.maxlength)"
+                        minlength="16"
+                        maxlength="16"
+                        required/>
+                    </div>
+                    <div class="carddateExpInfo">
+                      <div class="expDate">
+                        <label for="expiry_Date">Exp. Date (MM/YY)</label>
+                        <div class="inputs">
+                            <div class="numMonth">
+                                <input type="number"
+                                    placeholder="MM"
+                                    oninput="if(this.value.length > this.maxlength)this.value=this.value.slice(0,this.maxlength)"
+                                minlength="2"
+                                maxlength="2"
+                                id="Date-month"
+                                required
+                                />
+                            </div>
+                            <div class="numYear">
+                                <input type="number"
+                                    placeholder="YY"
+                                    oninput="if(this.value.length > this.maxlength)this.value=this.value.slice(0,this.maxlength)"
+                                minlength="2"
+                                maxlength="2"
+                                id="Date-year"
+                                required
+                                />
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="CVC_info">
+                        <label for="cvc_card">CVC</label>
+                        <input type="number"
+                                    placeholder="e.g. 123"
+                                    oninput="if(this.value.length > this.maxlength)this.value=this.value.slice(0,this.maxlength)"
+                                minlength="3"
+                                maxlength="3"
+                                id="CVC"
+                                required
+                                />
+                    </div>
+              
+                    <button id="submitBtn" type="submit">Confirm</button>
+                 </form>
+                </div>
+            </div>
+                <div class="thanks Hidden">
+                    <img src="icon-complete.svg" alt="icon-complete image">
+                    <h1>Thank you!</h1>
+                    <p> We've added your card details</p>
+                    <button>Continue</button>
+                </div>
+              
+
+            </div>
+        </main>
+        <script src="detailCard.js"></script>
+    </body>
+</html>
